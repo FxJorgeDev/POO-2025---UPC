@@ -1,0 +1,225 @@
+  #EJERCICIO 10
+
+""""
+cadena = str("2025 maravilloso el sostenible que sea mundo un y")
+print(cadena[31:35:])
+print(cadena[17:19:])
+print(cadena[0:4:])
+print(cadena[35:39:])
+print(cadena[45:48:])
+print(cadena[-10:-5:])
+print(cadena[5:17:])
+print(cadena[-1::])
+print(cadena[20:31:])"""
+
+  #EJERCICIO 11
+ 
+     # cadena[inicio:final:paso]
+"""cadena = str("En el mar, la vida es mas sabrosa")
+print(len(cadena))
+
+print(cadena[-14:-7:])
+print(cadena[0:9:])
+print(cadena[-11::])
+print(cadena[-25:-31:-1]) """
+
+  #EJERCICIO 12
+""""
+def descendente(a, b, c):
+ 
+  if a >= b and a >= c:
+    print(a)
+  elif b >= a and b >= c:
+   print (b)
+  else:
+    print(c)
+
+  if a >= b and a <= c:
+    print(a)
+  elif b >= a and b <= c:
+   print (b)
+  else:
+    print(c)
+
+  if  a <= b and a < c:
+    print(a)
+  elif b <= a and b <= c:
+   print (b)
+  else:
+    print(c)
+
+
+try:
+  a = int(input("Ingrese el valor de a: "))
+  b = int(input("Ingrese el valor de b: "))  
+  c = int(input("Ingrese el valor de c: "))     
+except ValueError:
+  print("Ingrese solo variables enteras..........")
+
+descendente(a,b,c)  """
+
+  #EJERCICIO 13
+"""
+escala = str(input("Ingrese la escala del pago (A,B,C,D): "))
+try:
+  cursos = int(input("Ingrese la cantidad de cursos: "))
+except ValueError:
+  print("Los cursos son solo numeros enteros...")
+if cursos > 0:
+ if escala!= 'A' and escala != 'B' and escala != 'C' and escala != 'D':
+  print("La escala de pagos solo son las mencionadas.....")
+ else:
+  match escala:
+    case 'A':
+      if cursos >= 1 and cursos <= 5:
+        cv = 400
+      elif cursos >= 6 and cursos <= 8:
+        cv = 600
+      else:
+        cv = 900
+    case 'B':
+      if cursos >= 1 and cursos <= 3:
+        cv = 350
+      elif cursos >= 4 and cursos <= 7:
+        cv = 500
+      else:
+        cv = 700
+    case 'C':
+      if cursos >= 1 and cursos <= 3:
+        cv = 320
+      elif cursos >= 4 and cursos <= 7:
+        cv = 480
+      else:
+        cv = 685
+    case 'D':
+      if cursos >= 1 and cursos <= 4:
+        cv = 310
+      elif cursos >= 5 and cursos <= 8:
+        cv = 475
+      else:
+        cv = 680
+
+ importe = float(350 + cv)
+ print("El importe por cancelar es de S/",  importe)
+else:
+ print("ERROR......") """
+
+ #EJERCICIO 14
+"""
+def cuadrado(a,b):
+ print(a**2)
+ if (a**2) == b:
+  print("El segundo es el cuadrado del primero....")
+ else:
+   return
+
+def menor(a,b):
+  if b < (a**2):
+    print("El segundo es menor que el cuadrado del primero")
+  else:
+    return
+
+def mayor(a,b):
+  if b > (a**2):
+    print("El segundo es mayor que el cuadrado del primero...")
+  else:
+    return
+  
+
+a = float(input("Ingrese el primer numero: "))
+b = float(input("Ingrese el segundo numero: "))
+
+cuadrado(a,b)
+menor(a,b)
+mayor(a,b) """
+
+  
+#EJERCICIO 15
+
+def reverso(num):
+  num = int(num)
+  num1 = str(num)
+  num2 = num1[::-1]
+  num3 = int(num2)
+  print("El numero al reverso ", num3)
+num = int(input("Ingrese un numero mayor a 99: "))
+reverso(num)
+if num > 99 and num < 50000:
+ if num >= 100 and num < 1000:
+    if num % 10 == num // 100:
+      print("El numero es CAPICUA")
+    else:
+       num1 = str(num)
+       num2 = num1[::-1]
+       num3 = int(num2)
+       print("La suma de los numeros es", num + num3) 
+ if num >= 1000 and num < 10000:
+   num1 = str(num)
+   num2 = num1[::-1]
+   num3 = int(num2)
+   if num == num3:
+     print("El numero es CAPICUA")
+   else:
+     print(num, "+", num3, "La suma es ", num + num3)
+ if num >= 10000 and num < 100000:
+   num1 = str(num)
+   num2 = num1[::-1]
+   num3 = int(num2)
+   if num == num3:
+     print("El numero es CAPICUA")
+   else:
+     print(num, "+", num3, "La suma es ", num + num3)
+else:
+  print("El numero ingresado solo tiene que ser de 3 a 5 cifras...")
+
+#EJERCICIO 12 POR EL PROFE
+""""
+def mayor(a,b,c):
+    if a > b and a > c:
+        print (a)
+    elif b > a and b > c:
+        print(b)
+    else:
+        print(c)
+def menor(a,b,c):
+    if a < b and a < c:
+        print(a)
+    elif b < c and b < a:
+        print(b)
+    else:
+        print(c)
+def medio(a,b,c):
+    if a < b and a > c:
+        print(a)
+    elif b < c and b > a:
+        print(b)
+    else:
+        print(c)
+
+try:
+   a = int(input("Ingrese A: "))
+   b = int(input("Ingrese B: "))
+   c = int(input("Ingrese C: "))
+except ValueError:
+   print("Solo numeros enteros posistivos....")
+if a > 0 and b > 0 and c >0:
+   print("Ordenado descendetemente: ")
+   mayor(a,b,c)
+   medio(a,b,c)
+   menor(a,b,c)
+else:
+    print("Solo numeros mayores a 0...")"""
+    
+
+      
+
+
+  
+
+ 
+
+
+
+   
+
+

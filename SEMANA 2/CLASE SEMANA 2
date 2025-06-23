@@ -1,0 +1,122 @@
+# Ejercicio 1
+"""a = 0
+if a:
+   print("Hola")
+else:
+    print("Adios") """
+    
+#EJERCICIO 2
+""""
+while True:
+    try:
+        far = float(input("Ingrese los grados en fahrenheint: "))
+        if far > -459.67:
+         cel = (far- 32)/1.8
+         break
+        else:
+            print("Grados ingresados fuera del rango....")
+    except ValueError:
+        print("Los datos ingresados no son numeros reales.......")
+
+print("Los grados en celsius son " , cel) """
+
+#EJERCICIO 3
+"""
+while True:
+  try:
+      num = int(input("Ingrese un numero entre 1 a 100: "))
+      if num > 0 and num < 101:
+        break
+      else:
+        print("ERROR....")
+  except ValueError:
+      print("INGRESE UN NUMERO....")
+      
+if num >= 1 and num < 10:
+    print("EL NUMERO INGRESADO TIENE 1 DIGITO....")
+elif num >= 10 and num < 100:
+    print("EL NUMERO INGRESADO TIENE 2 DIGITOS...")
+else:
+    print("EL NUMERO TIENE 3 DIGITOS")"""
+    
+#EJERCICIO 4
+""""
+while True:
+   
+    try:
+        a = int(input("Ingrese A: "))
+        b = int(input("Ingrese B: "))
+        c = int(input("Ingrese C: "))
+        mayor = a
+        menor = a
+        if a != b and b != c and a != c:
+            if a > b and a > c:
+                mayor = a
+                print ("MAYOR" , a)
+            elif  b > a  and b > c:
+                mayor = b
+                print ("MAYOR" , b)
+            else:
+                mayor = c
+                print ("MAYOR" , c)
+       
+        
+       
+            if a < b and a < c:
+                menor = a
+                print ("MENOR" , a)
+            elif b < a  and b < c:
+                menor = b
+                print ("MENOR" , b)
+            else:
+                menor = c
+                print ("MENOR" , c)
+        else:
+            print("LOS NUMEROS TIENEN QUE SER DISTINTOS.....")
+                
+            
+    except ValueError:
+        print("Los valores ingresados tienen que ser ENTEROS....")"""
+        
+  #EJERCICIO 6
+
+""""
+while True:
+       num = int(input("Ingrese un numero mayor a 0: "))
+       try:
+         if num > 0:
+              if num % 2 == 0 and num/ 2 % 2 == 1:
+                print("EL NUMERO ES DOBLE DE " , num/2)
+              else:
+                print("EL NUME NO ES DOBLE DE UN IMPAR")
+         else:
+             print("El numero tiene que ser mayor a 0")
+    
+       except ValueError:
+          print("El numero tiene que ser ENTERO....") """
+          
+  #EJERCICIO 7 STR
+ 
+"""" 
+a= 'b'
+print (a + 'b')
+print (a + 'a')
+print (a*2  + 'b'*3)
+print (2*(a +'b'))
+print (2*('a' + 'b')) """
+
+  #EJERCICIO 8 STR
+   
+""""
+ print (str (2.1) + str(1.2))
+ print (int(str(2)) + str(3))
+ print (str(int(12.3) + '0'))
+ (int('2' + '3'))
+ print (str(int(2.1)+ float(3))) """
+
+  #EJERCICIO 10
+
+cadena = str("2025 maravilloso el sostenible que sea mundo un y")
+print(cadena[31::35])
+
+
